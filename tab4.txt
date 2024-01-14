@@ -1,0 +1,523 @@
+
+# with tab4:
+#         st.title("Dyscalculia Test")
+#         st.write("Welcome to the Dyscalculia Test!")
+#         st.write("Please click the button below to start the test:")
+#         dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+#         if dyscalculia_test_button:
+#             # Load quiz questions from CSV
+#             questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#             # Display quiz questions
+#             user_answers = []
+#             for i, row in questions_df.iterrows():
+#                 question = row['Question']
+#                 options = row['Options'].split(', ')
+#                 user_answer = st.radio(f"Q{i + 1}: {question}", options)
+#                 user_answers.append(user_answer)
+
+#             # Evaluate the quiz and show the score
+#             score, total_questions = evaluate_quiz(questions_df, user_answers)
+#             st.write(f'You scored {score}/{total_questions}.')
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please click the button below to start the test:")
+#     dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+#     if dyscalculia_test_button:
+#         # Load quiz questions from CSV
+#         questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#         # Initialize variables to keep track of the score
+#         score = 0
+#         total_questions = len(questions_df)
+
+#         # Display and evaluate quiz questions
+#         for i, row in questions_df.iterrows():
+#             question = row['Question']
+#             user_response = st.radio(f"Q{i + 1}: {question}", ('Yes', 'No'))
+            
+#             # Check if the user response matches the correct answer
+#             if user_response.lower() == row['Answer'].lower():
+#                 score += 1
+
+#         # Display the final message
+#         message = evaluate_quiz(questions_df, [])
+#         st.write(message)
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please click the button below to start the test:")
+#     dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+#     if dyscalculia_test_button:
+#         # Load quiz questions from CSV
+#         questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#         # Display and evaluate quiz questions
+#         for i, row in questions_df.iterrows():
+#             question = row['Question']
+#             user_response = st.radio(f"Q{i + 1}: {question}", ('Yes', 'No'))
+
+#         # Display the final message
+#         message = evaluate_quiz(questions_df, [])
+#         st.write(message)
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please click the button below to start the test:")
+#     dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+#     if dyscalculia_test_button:
+#         # Load quiz questions from CSV
+#         questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#         # # Initialize an empty list to store user responses
+#         user_responses = []
+
+#         # # Display quiz questions and let the user select options
+#         for i, row in questions_df.iterrows():
+#            question = row['Question']
+#            user_response = st.radio(f"Q{i + 1}: {question}", ('Yes', 'No'))
+#            user_responses.append(user_response)
+
+#         # # Submit the test
+#         # submit_button = st.button("Submit Test")
+
+#         # if submit_button:
+#         #     # Display the final message
+#         #     message = "Thanks for submitting!!"
+#         #     st.write(message)
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please click the button below to start the test:")
+#     dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+#     if dyscalculia_test_button:
+#         # Load quiz questions from CSV
+#         questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#         # Initialize an empty list to store user responses
+#         user_responses = []
+
+#         # Display quiz questions and let the user select options
+#         for i, row in questions_df.iterrows():
+#             question = row['Question']
+#             user_response = st.radio(f"Q{i + 1}: {question}", ('Yes', 'No'), index=0)
+#             user_responses.append(user_response)
+
+#         # Add a submit button to calculate and display the score
+#         submit_test_button = st.button("Submit Test")
+
+#         if submit_test_button:
+#             # Call the evaluate_quiz function to calculate the score
+#             score, total_questions = evaluate_quiz(questions_df, user_responses)
+
+#             # Display the user's score
+#             st.write(f"Your score: {score}/{total_questions}")
+
+    # def load_quiz_data():
+    #     df = pd.read_csv("data/quiz_questions.csv")
+    #     return df
+
+    # quiz_data = load_quiz_data()
+    # total_questions = len(quiz_data)
+
+    # # Initialize a score variable to keep track of the user's score
+    # score = 0
+
+    # # Iterate through the quiz questions
+    # for index, row in quiz_data.iterrows():
+    #     question = row["Question"]
+    #     options = [row["Yes"], row["No"]]
+    #     correct_answer = row["Answer"]
+
+    #     st.write(f"**Question {index + 1}:** {question}")
+
+    #     # Create radio buttons for answer options
+    #     unique_key = f"question_{index}_radio"
+    #     user_answer = st.radio(unique_key, options)
+
+    #     # Check if the user's answer is correct
+    #     if user_answer == correct_answer:
+    #         st.write("Correct! 🎉")
+    #         score += 1
+    #     else:
+    #         st.write(f"Wrong! The correct answer is {correct_answer}.")
+
+    # # Display the user's final score
+    # st.write(f"Your Score: {score}/{total_questions}")
+
+
+    # if dyscalculia_test_button:
+    #     # Load quiz questions from CSV
+    #     questions_df = pd.read_csv("data/quiz_questions.csv")
+
+    #     # Initialize an empty list to store user responses
+    #     user_responses = []
+
+    #     # Display quiz questions and let the user select options
+    #     for i, row in questions_df.iterrows():
+    #         question = row['Question']
+    #         user_response = st.radio(f"Q{i + 1}: {question}", ('Yes', 'No'), index=0)
+    #         user_responses.append(user_response)
+
+    #     # Add a submit button to calculate and display the score
+    #     submit_test_button = st.button("Submit Test")
+
+    #     if submit_test_button:
+    #         # Call the evaluate_quiz function to calculate the score
+    #         score, total_questions = evaluate_quiz(questions_df, user_responses)
+            
+    #         # Display the user's score
+    #         st.write(f"Your score: {score}/{total_questions}")
+
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please click the button below to start the test:")
+#     dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+# # Define submit_test_button outside of the conditional block
+# submit_test_button = False
+
+# if dyscalculia_test_button:
+#     # Load quiz questions from CSV
+#     questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#     # Initialize an empty list to store user responses
+#     user_responses = []
+
+#     # Display quiz questions and let the user select options
+#     for i, row in questions_df.iterrows():
+#         question = row['Question']
+#         user_response = st.radio(f"Q{i + 1}: {question}", ('Yes', 'No'))
+#         user_responses.append(user_response)
+
+#     # Add a submit button to calculate and display the score
+#     submit_test_button = st.button("Submit Test")
+
+# # Check if the test has been submitted
+# if submit_test_button:
+#     st.title("Quiz Score")
+    
+#     # Call the evaluate_quiz function to calculate the score
+#     score, total_questions = evaluate_quiz(questions_df, user_responses)
+
+#     # Display the user's score
+#     st.write(f"Your score: {score}/{total_questions}")
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please click the button below to start the test:")
+#     dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+#     if dyscalculia_test_button:
+#         # Load quiz questions from CSV
+#         questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#         # Initialize an empty list to store user responses
+#         user_responses = []
+
+#         # Display quiz questions and let the user select options using dropdowns
+#         for i, row in questions_df.iterrows():
+#             question = row['Question']
+            
+#             # Use a dropdown menu with options 'Yes' and 'No'
+#             user_response = st.selectbox(f"Q{i + 1}: {question}", ('Yes', 'No'))
+#             user_responses.append(user_response)
+
+#         # Add a submit button to calculate and display the score
+#         submit_test_button = st.button("Submit Test")
+
+#         if submit_test_button:
+#             # Call the evaluate_quiz function to calculate the score
+#             score, total_questions = evaluate_quiz(questions_df, user_responses)
+
+#             # Display the user's score
+#             st.write(f"Your score: {score}/{total_questions}")
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please click the button below to start the test:")
+#     dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+#     if dyscalculia_test_button:
+#         # Load quiz questions from CSV
+#         questions_df = pd.read_csv("data/quiz_questions.csv")
+
+#         # Initialize a dictionary to store user responses with question IDs as keys
+#         user_responses = {}
+
+#         # Display quiz questions and let the user select options
+#         for i, row in questions_df.iterrows():
+#             question_id = f"Q{i + 1}"
+#             question = row['Question']
+            
+#             # Use a dropdown menu with options 'Yes' and 'No'
+#             user_response = st.selectbox(f"{question_id}: {question}", ('Yes', 'No'), key=question_id)
+
+#             # Store the user response in the dictionary
+#             user_responses[question_id] = user_response
+
+#         # Add a submit button to calculate and display the score
+#         submit_test_button = st.button("Submit Test")
+
+#         if submit_test_button:
+#             # Convert the user responses dictionary to a list in the same order as questions
+#             user_responses_list = [user_responses[f"Q{i + 1}"] for i in range(len(questions_df))]
+
+#             # Call the evaluate_quiz function to calculate the score
+#             score, total_questions = evaluate_quiz(questions_df, user_responses_list)
+
+#             # Display the user's score
+#             st.write(f"Your score: {score}/{total_questions}")
+
+
+# ...
+
+# with tab4:
+#     st.title("Dyscalculia Test")
+#     st.write("Welcome to the Dyscalculia Test!")
+#     st.write("Please follow the steps below:")
+
+#     # Tab 1: Start Test
+#     tab1 = st.button("Step 1: Start Test")
+#     if tab1:
+#         st.write("You can now proceed to answer the questions.")
+#         st.write("Click on 'Step 2' when you are ready.")
+
+#     # Tab 2: Answer Questions
+#     tab2 = st.button("Step 2: Answer Questions")
+#     if tab2:
+#         # Load quiz questions from CSV
+#         questions_df = pd.read_csv("data/quiz_questions.csv")
+#         user_responses = display_questions(questions_df)
+        
+#         # Store user responses in session state to preserve data between tabs
+#         st.session_state.user_responses = user_responses
+#         st.write("Click on 'Step 3' when you have answered all the questions.")
+
+#     # Tab 3: View Answers and Calculate Score
+#     tab3 = st.button("Step 3: View Answers and Calculate Score")
+#     if tab3:
+#         # Retrieve user responses from session state
+#         user_responses = st.session_state.user_responses
+        
+#         # Display user responses
+#         st.title("Your Responses")
+#         for question_id, response in user_responses.items():
+#             st.write(f"{question_id}: {response}")
+
+#         # Call the evaluate_quiz function to calculate the score
+#         score, total_questions = evaluate_quiz(questions_df, list(user_responses.values()))
+
+#         # Display the user's score
+#         st.title("Quiz Score")
+#         st.write(f"Your score: {score}/{total_questions}")
+
+# st.title("Dyscalculia Test")
+    # st.write("Welcome to the Dyscalculia Test!")
+    # st.write("Please click the button below to start the test:")
+    # dyscalculia_test_button = st.button("Start Dyscalculia Test")
+
+    # if dyscalculia_test_button:
+    #     quiz_data = [
+    #         {
+    #             'question': 'Do you often struggle with basic arithmetic operations, such as addition, subtraction, multiplication, and division?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you have trouble recognizing patterns or sequences in numbers or mathematical problems?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Is it difficult for you to understand and remember mathematical concepts and rules?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Is it challenging for you to estimate quantities or measurements accurately?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you find it hard to tell time on an analog clock?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you find it difficult to understand financial planning or budgeting, sometimes even at a basic level?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you reverse or mix up numbers?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you have difficulty with everyday tasks involving numbers?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you have significant anxiety about doing maths and using mathematical devices?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you have difficulty counting using your fingers?',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  # Index of the correct option (0-based)
+    #         },
+    #         {
+    #             'question': 'Do you have difficulty with number bonds? (e.g.recognising that 10 is made up of 9 and 0)',
+    #             'options': ['yes', 'NO'],
+    #             'correct_option': 0  
+    #         }
+    #     ]
+
+    #     # Create a Streamlit form
+    #     form = st.form(key='quiz_form')
+
+    #      # Initialize a variable to keep track of the score
+    #     score = 0
+
+    #     # Loop through the quiz data and create form components for each question
+    #     for i, question_data in enumerate(quiz_data):
+    #         question = question_data['question']
+    #         options = question_data['options']
+    #         correct_option = question_data['correct_option']
+
+    #         st.write(f"*Question {i + 1}:* {question}")
+
+    #         # Create radio buttons for answer options
+    #         selected_option = st.radio(f"Select an option for Question {i + 1}", options)
+
+    #         # Check if the selected option is correct and update the score
+    #         if selected_option == options[correct_option]:
+    #             score += 1
+
+    #     # Add a submit button inside the form block
+    #     st.form_submit_button(label='Submit Quiz')
+
+    #         # Check if the form is submitted
+    #     if st.form_submit_button():
+    #         st.write(f'Your Quiz Score: {score}/{len(quiz_data)}')
+
+
+
+
+  # '''-------------------------------------------------------------------------------------------------------------------------------------------------------------------------'''
+# app = FastAPI()
+
+# # Define a Pydantic model to validate the form data
+# class QuizResponse(BaseModel):
+#     q1: str
+#     q2: str
+#     # Add more fields as needed for each question
+
+# @app.post("/submit")
+# async def submit_quiz_response(response: QuizResponse):
+#     # Convert the response data to a Pandas DataFrame
+#     response_df = pd.DataFrame([response.dict()])
+
+#     # Save the response to a CSV file (append if the file already exists)
+#     response_df.to_csv("user_responses.csv", mode="a", index=False, header=not st.file_uploader)
+
+#     # Return a response to the HTML form (e.g., success message)
+#     return {"message": "Thanks, submitted!"}  
+
+
+
+
+        # # Define the parental questionnaire questions for each category
+        # dyslexia_questions = [
+        #     "Does your child struggle with reading words accurately and fluently?",
+        #     "Does your child often confuse similar-sounding words, such as 'cat' and 'bat'?",
+        #     "Does your child have difficulty spelling common words?",
+        #     "Does your child find it challenging to follow written instructions?",
+        #     "Does your child frequently lose their place while reading?"
+        # ]
+
+        # dysgraphia_questions = [
+        #     "Does your child struggle with handwriting, making it hard to read their writing?",
+        #     "Does your child have difficulty forming letters and numbers correctly?",
+        #     "Does your child experience pain or discomfort while writing or drawing for an extended period?",
+        #     "Does your child often reverse letters or numbers, like writing 'b' instead of 'd'?",
+        #     "Does your child find it challenging to organize their thoughts in writing?"
+        # ]
+
+        # dyscalculia_questions = [
+        #     "Does your child have difficulty understanding and working with numbers?",
+        #     "Does your child find it challenging to remember basic math facts, such as addition and subtraction?",
+        #     "Does your child struggle with telling time or understanding concepts like 'greater than' and 'less than'?",
+        #     "Does your child have difficulty solving word problems in math?",
+        #     "Does your child often mix up mathematical symbols or transpose numbers, like writing '35' instead of '53'?"
+        # ]
+
+        # # Function to evaluate responses
+        # def evaluate_responses(questions, responses):
+        #     yes_count = 0
+        #     for i, response in enumerate(responses):
+        #         if response.lower() == "yes":
+        #             yes_count += 1
+        #     return yes_count
+
+        # # Create a Streamlit app for the Parental Questionnaire
+        # st.title("Parental Questionnaire")
+
+        # st.subheader("Please answer the following questions about your child:")
+
+        # dyslexia_responses = []
+        # dysgraphia_responses = []
+        # dyscalculia_responses = []
+
+        # # Collect responses for each category
+        # for i, question in enumerate(dyslexia_questions):
+        #     st.write(f"{i + 1}. {question}")
+        #     response = st.radio(f"Select your response ({i + 1}):", ["Yes", "No"], key=f"dyslexia_{i}")
+        #     dyslexia_responses.append(response)
+
+        # for i, question in enumerate(dysgraphia_questions):
+        #     st.write(f"{i + 1}. {question}")
+        #     response = st.radio(f"Select your response ({i + 1}):", ["Yes", "No"], key=f"dysgraphia_{i}")
+        #     dysgraphia_responses.append(response)
+
+        # for i, question in enumerate(dyscalculia_questions):
+        #     st.write(f"{i + 1}. {question}")
+        #     response = st.radio(f"Select your response ({i + 1}):", ["Yes", "No"], key=f"dyscalculia_{i}")
+        #     dyscalculia_responses.append(response)
+
+        # # Add unique key to the submit button
+        # if st.button("Submit Parental Questionnaire"):
+        #     # Evaluate responses for each category
+        #     dyslexia_yes_count = evaluate_responses(dyslexia_questions, dyslexia_responses)
+        #     dysgraphia_yes_count = evaluate_responses(dysgraphia_questions, dysgraphia_responses)
+        #     dyscalculia_yes_count = evaluate_responses(dyscalculia_questions, dyscalculia_responses)
+
+        #     # Suggest further assessment based on responses for each disability
+        #     if dyslexia_yes_count > 2:
+        #         st.write("Based on your responses, we recommend that your child takes further assessments for dyslexia.")
+            
+        #     if dysgraphia_yes_count > 2:
+        #         st.write("Based on your responses, we recommend that your child takes further assessments for dysgraphia.")
+            
+        #     if dyscalculia_yes_count > 2:
+        #         st.write("Based on your responses, we recommend that your child takes further assessments for dyscalculia.")
+
+
+        # Define the parental questionnaire questions for each category

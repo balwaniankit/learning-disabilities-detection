@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Page</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const form = document.querySelector('form');
+          form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+      
+            // Collect form data
+            const formData = new FormData(form);
+      
+            // Convert form data to JSON
+            const formDataJSON = {};
+            formData.forEach((value, key) => {
+              formDataJSON[key] = value;
+            });
+      
+            // Send the form data to the Streamlit app
+            fetch('/submit', {
+              method: 'POST',
+              body: JSON.stringify(formDataJSON),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            })
+              .then(response => response.json())
+              .then(data => {
+                // Handle the response from the Streamlit app if needed
+                console.log(data);
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
+          });
+        });
+      </script>
+</head>
+
+<body>
+    <header>
+        <h1>Quiz Page</h1>
+    </header>
+
+    <main>
+        <section id="quiz">
+            <h2>Quiz Questions</h2>
+            <form action="quiz_results.html" method="post">
+                <ol>
+                    <li>
+                        <h3>Question 1</h3>
+                        <p>What is the capital of France?</p>
+                        <label>
+                            <input type="radio" name="q1" value="Paris"> Paris
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="London"> London
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="Berlin"> Berlin
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="Madrid"> Madrid
+                        </label>
+                    </li>
+                    <li>
+                        <h3>Question 2</h3>
+                        <p>How many continents are there?</p>
+                        <label>
+                            <input type="radio" name="q2" value="4"> 4
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="5"> 5
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="6"> 6
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="7"> 7
+                        </label>
+                    </li>
+                    <!-- Add more questions here -->
+                </ol>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Quiz Page</p>
+    </footer>
+</body>
+
+</html>
