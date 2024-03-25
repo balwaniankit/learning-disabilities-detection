@@ -10,17 +10,11 @@ import speech_recognition as sr
 import pyttsx3
 import time
 import eng_to_ipa as ipa
-from evaluation import evaluate_quiz
 import form
-from fastapi import FastAPI, Request
-from pydantic import BaseModel
-
-
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 from msrest.authentication import CognitiveServicesCredentials
 
-import time
 
 from abydos.phonetic import Soundex, Metaphone, Caverphone, NYSIIS
 
