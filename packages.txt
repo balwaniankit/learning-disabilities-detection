@@ -1,1 +1,2 @@
 default-jre
+portaudio19-dev
