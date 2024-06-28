@@ -43,7 +43,7 @@ def levenshtein(s1, s2):
 
 
 # image to text API authentication
-subscription_key_imagetotext = "1f6c3654570b4f148de9c5c25e3ed4ee"
+subscription_key_imagetotext = ""
 endpoint_imagetotext = "https://mycognitiveservices1991.cognitiveservices.azure.com/"
 computervision_client = ComputerVisionClient(
     endpoint_imagetotext, CognitiveServicesCredentials(subscription_key_imagetotext))
@@ -51,7 +51,7 @@ computervision_client = ComputerVisionClient(
 # '''-------------------------------------------------------------------------------------------------------------------------------------------------------------------------'''
 
 # text correction API authentication
-api_key_textcorrection = "3c967bf16eb347e993e09c11515e3adf"
+api_key_textcorrection = ""
 endpoint_textcorrection = "https://api.bing.microsoft.com/v7.0/SpellCheck"
 
 # '''-------------------------------------------------------------------------------------------------------------------------------------------------------------------------'''
